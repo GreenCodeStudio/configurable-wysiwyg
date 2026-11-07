@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="https://raw.githubusercontent.com/GreenCodeStudio/configurable-wysiwyg/refs/heads/master/schema.xsd"
+           elementFormDefault="qualified">
+
+  <!-- Empty element: <selection/> -->
+  <xs:element name="selection">
+    <xs:complexType/>
+  </xs:element>
+
+  <!-- document can contain any children (elements + text) -->
+  <xs:element name="document">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
